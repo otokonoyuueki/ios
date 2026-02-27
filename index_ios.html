@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>リダイレクト中...</title>
+</head>
+<body>
+  <p>移動中です。しばらくお待ちください...</p>
+  <script>
+    const links = [
+      "https://matching-affi.jp/optim.php?ms=mi496el3tspl",
+      "https://preaf.jp/pa.do?s=v19509&o=65715&guid=ON",
+      "https://preaf.jp/pa.do?s=v19509&o=65541&guid=ON",
+      "https://preaf.jp/pa.do?s=v19509&o=66323&guid=ON",
+      "https://preaf.jp/pa.do?s=v19509&o=64838&guid=ON",
+      "https://preaf.jp/pa.do?s=v19509&o=64830&guid=ON"
+    ];
+
+    const now = new Date();
+    const hour = now.getHours();
+    const minute = now.getMinutes();
+
+    // 30分単位のスロット番号（0:00→0, 0:30→1, 1:00→2, ...）
+    const slot = hour * 2 + (minute >= 30 ? 1 : 0);
+    const index = slot % links.length;
+
+    window.location.href = links[index];
+  </script>
+</body>
+</html>
