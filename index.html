@@ -16,6 +16,12 @@
       "https://preaf.jp/pa.do?s=v19509&o=64838&guid=ON",
       "https://preaf.jp/pa.do?s=v19509&o=64830&guid=ON"
     ];
-
     const now = new Date();
-    const hour = now.getHours(
+    const hour = now.getHours();
+    const minute = now.getMinutes();
+    const slot = hour * 2 + (minute >= 30 ? 1 : 0);
+    const index = slot % links.length;
+    window.location.href = links[index];
+  </script>
+</body>
+</html>
