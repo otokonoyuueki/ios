@@ -9,9 +9,12 @@
       "https://preaf.jp/pa.do?s=v19509&o=65541&guid=ON",
       "https://preaf.jp/pa.do?s=v19509&o=66323&guid=ON",
       "https://preaf.jp/pa.do?s=v19509&o=64838&guid=ON",
-      "https://preaf.jp/pa.do?s=v19509&o=64830&guid=ON"
+      "https://preaf.jp/pa.do?s=v19509&o=64830&guid=ON",
+      "https://preaf.jp/pa.do?s=v19509&o=64632&guid=ON",
+      "https://preaf.jp/pa.do?s=v19509&o=66950&guid=ON"
     ];
-    var weights = [5, 19, 19, 19, 19, 19];
+    var w = 95 / 7;
+    var weights = [5, w, w, w, w, w, w, w];
     var r = Math.random() * 100;
     var total = 0;
     for (var i = 0; i < links.length; i++) {
